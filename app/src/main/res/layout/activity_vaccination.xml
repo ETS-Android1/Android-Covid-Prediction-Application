@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/purple_500">
+    <RelativeLayout
+        android:id="@+id/rlActionbar"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:paddingVertical="15sp"
+        android:background="@color/purple_700"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginHorizontal="20sp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Are you Vaccinated?"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20sp"
+        android:paddingTop="20sp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Vaccine"
+        android:textSize="18sp"
+        android:textColor="@color/tintcolor"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_vaccine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_vaccine_moderna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moderna"
+            android:textColor="@color/white"
+            android:buttonTint="@color/tintcolor"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/rb_vaccine_pfizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pfizer"
+            android:textColor="@color/white"
+            android:buttonTint="@color/tintcolor"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/rb_vaccine_jj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Johnson and johnson"
+            android:buttonTint="@color/tintcolor"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tv_first_dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Had your First Dose?"
+        android:textColor="@color/tintcolor"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_firstdose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_firstdose_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:buttonTint="@color/tintcolor"
+            android:text="Yes"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/rb_firstdose_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginStart="10sp"
+            android:buttonTint="@color/tintcolor"
+            android:text="No"
+            android:onClick="onRadioButtonClicked"/>
+
+
+    </RadioGroup>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_firstdose"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_white_item"
+            android:padding="10sp"
+            android:editable="false"
+            android:textColorHint="#A9000000"
+            android:hint="choose date"
+            android:visibility="gone"
+            android:focusable="false"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            />
+
+    <TextView
+        android:id="@+id/tv_seconddose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Had your Second Dose?"
+        android:textColor="@color/tintcolor"
+        android:layout_marginTop="12dp"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_seconddose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_seconddose_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:buttonTint="@color/tintcolor"
+            android:text="Yes"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/rb_seconddose_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textColor="@color/white"
+            android:buttonTint="@color/tintcolor"
+            android:layout_marginStart="10sp"
+            android:onClick="onRadioButtonClicked"/>
+
+
+    </RadioGroup>
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_second_dose"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_white_item"
+            android:padding="10sp"
+            android:editable="false"
+            android:hint="choose date"
+            android:visibility="gone"
+            android:textColorHint="#A9000000"
+            android:focusable="false"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_next_dosage_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Dosage Date"
+        android:textColor="@color/tintcolor"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_next_dosage_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="5sp"
+        android:layout_gravity="center"
+        android:text="Result displays here"
+        android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

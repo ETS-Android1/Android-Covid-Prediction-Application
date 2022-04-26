@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".BmiActivity">
+    <RelativeLayout
+        android:id="@+id/rlActionbar"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:paddingVertical="15sp"
+        android:background="@color/purple_700"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginHorizontal="20sp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Diet Chart &amp; BMI"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#00000000"
+        app:cardCornerRadius="10sp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp"
+            android:background="@drawable/bg_transparent_item"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/bmi_calculator"
+                android:gravity="center"
+                android:paddingBottom="10sp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_transparent_item"
+                android:layout_height="1dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp"
+                android:text="@string/height"
+                android:textColor="#C1FFFFFF"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textColorHint="#9C000000"
+                android:hint="@string/enter_height_in_inches"
+                android:background="@drawable/bg_white_item"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp"
+                android:layout_marginTop="10sp"
+                android:text="@string/weight"
+                android:textColor="#C1FFFFFF"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textColorHint="#97000000"
+                android:textColor="@color/black"
+                android:padding="10sp"
+                android:background="@drawable/bg_white_item"
+                android:hint="@string/enter_weight_in_kg"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/purple_500"
+                android:layout_marginTop="10sp"
+                android:layout_marginHorizontal="10sp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_diet_chart"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Click Here For Diet Chart"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:backgroundTint="@color/white"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:gravity="bottom"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textStyle="bold|italic"-->
+    <!--        android:textSize="14sp"/>-->
+    <TextView
+        android:id="@+id/textViewYouLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:backgroundTint="@color/white"
+        android:layout_marginHorizontal="10sp"
+        android:textColorLink="@color/white"
+        android:text="@string/messageWithYLink"
+        android:textSize="22sp"
+        />
+
+</LinearLayout>

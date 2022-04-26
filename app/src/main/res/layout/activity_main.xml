@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    tools:ignore="ScrollViewCount">
+    <RelativeLayout
+        android:id="@+id/rlActionbar"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:paddingVertical="15sp"
+        android:background="@color/purple_700"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_centerVertical="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnPredict"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+
+                    android:layout_weight="1"
+                    android:paddingHorizontal="5sp"
+                    android:background="@drawable/bg_transparent_item"
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_icon_round"
+                        android:padding="5dp"
+                        android:src="@drawable/covid_prediction" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="Covid Prediction"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5sp"
+                        android:text="text desciptions"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnBmi"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_transparent_item"
+                    android:gravity="center"
+                    android:paddingHorizontal="5sp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_icon_round"
+                        android:padding="13dp"
+                        android:src="@drawable/diet" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="Diet Chart &amp; BMI"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5sp"
+                        android:text="text desciptions"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnVaccine"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+
+                    android:layout_weight="1"
+                    android:paddingHorizontal="5sp"
+                    android:background="@drawable/bg_transparent_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_icon_round"
+                        android:padding="12dp"
+                        android:src="@drawable/vaccine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="Are you Vaccinated?"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5sp"
+                        android:text="text desciptions"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnMedicine"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="5sp"
+                    android:background="@drawable/bg_transparent_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_icon_round"
+                        android:padding="12dp"
+                        android:src="@drawable/reminder" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="Medicine Reminder"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5sp"
+                        android:text="text desciptions"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnPharmacy"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+
+                    android:layout_weight="1"
+                    android:paddingHorizontal="5sp"
+                    android:background="@drawable/bg_transparent_item"
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_icon_round"
+                        android:padding="12dp"
+                        android:src="@drawable/pharmacy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="Pharmacy List"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5sp"
+                        android:text="text desciptions"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnFaqs"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="5sp"
+                    android:background="@drawable/bg_transparent_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/bg_icon_round"
+                        android:padding="13dp"
+                        android:src="@drawable/faqs" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="FAQ's"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5sp"
+                        android:text="text desciptions"
+                        android:textColor="#A3FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
